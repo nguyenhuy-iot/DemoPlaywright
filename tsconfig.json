@@ -8,11 +8,16 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["node", "playwright"],
-    "allowSyntheticDefaultImports": true
+    "types": ["node", "@playwright/test"],
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "skipLibCheck": true
   },
   "include": [
-    "tests",
+    "tests/**/*.ts",
+    "pages/**/*.ts",
+    "data/**/*.ts",
+    "utils/**/*.ts",
     "playwright.config.ts"
   ]
 }
