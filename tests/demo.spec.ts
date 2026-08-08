@@ -2,6 +2,10 @@ import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
   await page.goto('https://demo.playwright.dev/todomvc/#/');
+  await page.screenshot({
+    path: 'screenshots/step-final-result.png',
+    fullPage: true
+  });
   await page.getByRole('textbox', { name: 'What needs to be done?' }).click();
   await page.getByRole('textbox', { name: 'What needs to be done?' }).fill('123456');
   await page.getByRole('textbox', { name: 'What needs to be done?' }).press('Enter');
