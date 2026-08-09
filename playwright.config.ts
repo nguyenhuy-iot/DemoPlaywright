@@ -32,6 +32,8 @@ export default defineConfig({
     trace: 'on',
     video: 'on',
     screenshot: 'on',
+    // headless: false,
+    // storageState: 'storageState.json',
   },
 
   /* Configure projects for major browsers */
