@@ -1,6 +1,10 @@
 import { Page } from '@playwright/test';
 import * as path from 'path';
 
+export type EvidenceOptions = {
+  fullPage?: boolean;
+};
+
 export class EvidenceRecorder {
   private inputIndex = 0;
   private outputIndex = 0;
@@ -10,23 +14,27 @@ export class EvidenceRecorder {
     private readonly outputDir: string
   ) {}
 
-  async step(): Promise<void> {
+  async step(options: EvidenceOptions = {}): Promise<void> {
     this.inputIndex++;
-    await this.capture('input', this.inputIndex);
+    await this.capture('input', this.inputIndex, options.fullPage ?? false);
   }
 
-  async expect(): Promise<void> {
+  async expect(options: EvidenceOptions = {}): Promise<void> {
     this.outputIndex++;
-    await this.capture('output', this.outputIndex);
+    await this.capture('output', this.outputIndex, options.fullPage ?? false);
   }
 
-  private async capture(prefix: 'input' | 'output', index: number): Promise<void> {
+  private async capture(
+    prefix: 'input' | 'output',
+    index: number,
+    fullPage: boolean
+  ): Promise<void> {
     const number = String(index).padStart(2, '0');
     const fileName = `${prefix}_${number}.png`;
 
     await this.page.screenshot({
       path: path.join(this.outputDir, fileName),
-      fullPage: true,
+      fullPage,
     });
   }
 }

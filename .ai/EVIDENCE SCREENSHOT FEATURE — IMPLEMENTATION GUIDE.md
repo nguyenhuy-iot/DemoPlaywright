@@ -1036,25 +1036,24 @@ await expect(...);
 
 ---
 
-# 26. Full page screenshot
+## 26. Full page screenshot
 
 Mặc định sử dụng:
 
 ```ts
 await page.screenshot({
   path,
-  fullPage: true,
+  fullPage: false, // Mặc định là false
 });
 ```
 
-Không cần thêm option phức tạp nếu requirement chưa yêu cầu.
+Test author có thể tùy chọn:
 
-Nếu project hiện tại đã có convention screenshot khác, ưu tiên giữ convention hiện tại nhưng phải đảm bảo:
+```ts
+await evidence.step({ fullPage: true });
+```
 
-- file PNG
-- đúng filename
-- đúng output directory
-- đúng thời điểm chụp
+Class `EvidenceRecorder` sẽ hỗ trợ option này.
 
 ---
 

@@ -50,4 +50,14 @@ test.describe('Evidence Screenshot Feature', () => {
     const screenshotDir = testInfo.outputPath('screenshots');
     expect(fs.existsSync(path.join(screenshotDir, 'output_01.png'))).toBeTruthy();
   });
+
+  test('should support configurable fullPage screenshot', async ({ page, evidence }, testInfo) => {
+    await page.goto('https://playwright.dev/');
+
+    // Test with fullPage: true
+    await evidence.step({ fullPage: true });
+
+    const screenshotDir = testInfo.outputPath('screenshots');
+    expect(fs.existsSync(path.join(screenshotDir, 'input_01.png'))).toBeTruthy();
+  });
 });
