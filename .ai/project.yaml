@@ -1,0 +1,37 @@
+name: DemoPlaywright
+
+language: typescript
+framework: playwright
+
+architecture:
+  pattern: page-object-model
+  flow_layer: optional
+  component_layer: optional
+
+directories:
+  specs: tests/specs
+  pages: tests/pages
+  components: tests/components
+  fixtures: tests/fixtures
+  test_data: tests/test-data
+  support: tests/support
+  tools: tools
+
+rules:
+  specs_cannot_use_raw_locators: true
+  locators_must_be_in_page_objects: true
+  page_objects_must_be_injected_by_fixture: true
+  test_data_must_be_typed: true
+  no_wait_for_timeout: true
+  no_unrelated_changes: true
+
+validation:
+  run_typecheck: true
+  run_lint: true
+  run_test_after_change: true
+
+agent_behavior:
+  max_fix_attempts: 3
+  ask_before_architecture_change: true
+  do_not_guess: true
+  stop_on_ambiguous_requirement: true

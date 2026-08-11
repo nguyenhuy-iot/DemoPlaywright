@@ -8,7 +8,7 @@
 
 **Input**: User description: "Tái cấu trúc (Refactor) toàn bộ mã nguồn kiểm thử tự động hiện có để tuân thủ kiến trúc Page Object Model kết hợp Custom Fixtures."
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios & Testing _(mandatory)_
 
 ### User Story 1 - Refactor DemoQA Form Test (Priority: P1)
 
@@ -50,7 +50,7 @@ Là một kỹ sư QA, tôi muốn tái cấu trúc bài kiểm tra TodoMVC từ
 
 1. **Given** Ứng dụng TodoMVC, **When** Tương tác với danh sách todo qua Page Object, **Then** Các trạng thái ứng dụng được cập nhật và kiểm tra chính xác.
 
-## Requirements *(mandatory)*
+## Requirements _(mandatory)_
 
 ### Functional Requirements
 
@@ -60,7 +60,7 @@ Là một kỹ sư QA, tôi muốn tái cấu trúc bài kiểm tra TodoMVC từ
 - **FR-004**: Tuyệt đối MUST NOT sử dụng `new PageObject(page)` bên trong các file `.spec.ts`.
 - **FR-005**: Dữ liệu kiểm thử (như thông tin user John Doe) MUST được tách ra file `tests/test-data/users.json`.
 
-### Key Entities *(include if feature involves data)*
+### Key Entities _(include if feature involves data)_
 
 - **BasePage**: Class cơ sở chứa đối tượng `page` và các helper methods.
 - **DemoQAFormPage**: Page Object quản lý các locator và action cho trang DemoQA.
@@ -68,7 +68,7 @@ Là một kỹ sư QA, tôi muốn tái cấu trúc bài kiểm tra TodoMVC từ
 - **TodoPage**: Page Object quản lý ứng dụng TodoMVC.
 - **ProjectFixtures**: Định nghĩa các thuộc tính fixture để inject Page Objects vào test.
 
-## Success Criteria *(mandatory)*
+## Success Criteria _(mandatory)_
 
 ### Measurable Outcomes
 

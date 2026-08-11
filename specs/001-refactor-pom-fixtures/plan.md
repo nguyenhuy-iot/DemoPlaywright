@@ -5,6 +5,7 @@
 **Input**: Feature specification from `/specs/001-refactor-pom-fixtures/spec.md`
 
 ## Summary
+
 The goal is to refactor the current "flat" test script structure into a modern, maintainable Page Object Model (POM) architecture using Playwright Custom Fixtures. This involves migrating all logic to structured classes in `tests/pages/`, initializing them via `tests/fixtures/`, and isolating test data into `tests/test-data/`.
 
 ## Technical Context
@@ -29,7 +30,7 @@ The goal is to refactor the current "flat" test script structure into a modern, 
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+_GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
 - [x] POM & Fixtures (Principle I): Plan uses `test.extend` and Page Object classes.
 - [x] Locators (Principle II): Will use `getByRole` etc. in POM classes.
@@ -77,5 +78,5 @@ tests/
 ## Complexity Tracking
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| N/A       | N/A        | N/A                                 |
+| --------- | ---------- | ------------------------------------ |
+| N/A       | N/A        | N/A                                  |

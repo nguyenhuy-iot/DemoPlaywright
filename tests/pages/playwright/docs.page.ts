@@ -1,9 +1,13 @@
 import { Page } from '@playwright/test';
-import { BasePage } from './base.page';
+import { BasePage } from '../base.page';
 
 export class PlaywrightDocsPage extends BasePage {
   constructor(page: Page) {
     super(page);
+  }
+
+  async navigateTo(url: string) {
+    await this.page.goto(url);
   }
 
   async clickLink(name: string) {

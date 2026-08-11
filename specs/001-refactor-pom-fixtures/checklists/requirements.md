@@ -6,7 +6,7 @@
 
 ## Content Quality
 
-- [x] No implementation details (languages, frameworks, APIs) - *Note: Playwright and POM are architectural patterns requested by user.*
+- [x] No implementation details (languages, frameworks, APIs) - _Note: Playwright and POM are architectural patterns requested by user._
 - [x] Focused on user value and business needs
 - [x] Written for non-technical stakeholders
 - [x] All mandatory sections completed
