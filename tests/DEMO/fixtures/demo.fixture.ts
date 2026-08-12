@@ -1,12 +1,12 @@
-import { test as base } from '@playwright/test';
-import { TodoMvcPage } from '../pages/todomvc/todo.page';
-import { PlaywrightDocsPage } from '../pages/playwright/docs.page';
-import { PlaywrightHomePage } from '../pages/playwright/home.page';
-import { AutomationFormPage } from '../pages/demoqa/automation-form.page';
-import { EvidenceRecorder } from './evidence/evidence-recorder';
+import { test as base, expect as baseExpect } from '@playwright/test';
+import { TodoMvcPage } from '../todoMvc/todoApp/todo.page';
+import { PlaywrightDocsPage } from '../playwright/docs/docs.page';
+import { PlaywrightHomePage } from '../playwright/home/home.page';
+import { AutomationFormPage } from '../forms/practiceForm/automationForm.page';
+import { EvidenceRecorder } from '../../shared/utilities/evidence/evidence-recorder';
 
-// 1. Định nghĩa kiểu dữ liệu cho các custom fixtures
-export type ProjectFixtures = {
+// 1. Định nghĩa kiểu dữ liệu cho các custom fixtures của DEMO
+export type DemoFixtures = {
   todoMvcPage: TodoMvcPage;
   playwrightDocsPage: PlaywrightDocsPage;
   playwrightHomePage: PlaywrightHomePage;
@@ -14,8 +14,8 @@ export type ProjectFixtures = {
   evidence: EvidenceRecorder;
 };
 
-// 2. Mở rộng class test để tự động inject Page Objects
-export const test = base.extend<ProjectFixtures>({
+// 2. Mở rộng class test
+export const test = base.extend<DemoFixtures>({
   todoMvcPage: async ({ page }, use) => {
     const todoMvcPage = new TodoMvcPage(page);
     await use(todoMvcPage);
@@ -39,4 +39,5 @@ export const test = base.extend<ProjectFixtures>({
   },
 });
 
-export { expect } from '@playwright/test';
+// Re-export expect
+export const expect = baseExpect;

@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
-import { BasePage } from '../base.page';
+import { BasePage } from '../../../shared/pages/base.page';
 
 export class PlaywrightHomePage extends BasePage {
   readonly getStartedLink: Locator;

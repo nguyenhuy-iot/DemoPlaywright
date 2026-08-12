@@ -55,7 +55,7 @@ npx playwright test --ui
 ## 7. Chay 1 file test cu the
 
 ```bash
-npx playwright test tests/example.spec.ts
+npx playwright test tests/DEMO/home/home.spec.ts
 ```
 
 ## 8. Chay 1 test theo ten
@@ -67,7 +67,7 @@ npx playwright test -g "has title"
 ## 9. Chay 1 dong test cu the
 
 ```bash
-npx playwright test tests/example.spec.ts:3
+npx playwright test tests/DEMO/home/home.spec.ts:3
 ```
 
 ## 10. Chay test voi so worker cu the

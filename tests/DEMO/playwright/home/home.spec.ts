@@ -1,4 +1,4 @@
-import { test } from '../fixtures';
+import { test } from '../../fixtures/demo.fixture';
 
 test.describe('Playwright Home Page', () => {
   test.beforeEach(async ({ playwrightHomePage }) => {

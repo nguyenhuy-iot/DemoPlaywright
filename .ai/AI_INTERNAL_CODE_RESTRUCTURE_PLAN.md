@@ -1,3 +1,5 @@
+> **[HISTORY NOTE]**: This plan describes the initial restructuring strategy. The project has since adopted the `DEMO/` directory structure. Please refer to `DEMO/` for the current codebase organization.
+
 # AI Internal Code Restructure Plan
 
 > Mục tiêu: biến codebase thành một cấu trúc **dễ đọc, dễ kiểm tra, dễ sửa và khó sửa sai đối với AI nội bộ**.

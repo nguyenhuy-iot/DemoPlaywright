@@ -1,4 +1,4 @@
-import { test, expect } from '../../tests/fixtures/base.fixture';
+import { test, expect } from '../../fixtures/base.fixture';
 import * as fs from 'fs';
 import * as path from 'path';
 

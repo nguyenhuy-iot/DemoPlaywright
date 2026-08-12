@@ -1,4 +1,4 @@
-import { test } from '../../fixtures';
+import { test } from '../../fixtures/demo.fixture';
 
 test.describe('Automation Practice Form', () => {
   test('should submit form successfully with valid data', async ({ automationFormPage }) => {
